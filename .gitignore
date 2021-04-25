@@ -4,10 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.firebase
+.firebaserc
+firebase.json
+vscode
 # testing
 /coverage
-
+firebase-tools-instant-win.exe
 # production
 /build
 

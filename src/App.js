@@ -34,7 +34,7 @@ function App() {
     if(printable)
     {
     window.print()}
-    setTimeout(()=>setPrintable(false),1000)
+    setTimeout(()=>setPrintable(false),3000)
     console.log(printable)
   }, [printable])
 
@@ -235,7 +235,7 @@ const signatureHandler = (imageList, addUpdateIndex) => {
           </Row>
         <Row className="mt-3">
           <Col xs={{ span: 6, offset: 3 }} sm={{ span: 6, offset: 3 }} md={{ span: 4, offset: 4 }}>
-            <Button className="text-center" variant="primary" onClick={printHandler} block>Print Slips<h6> Compatible : Windows, IOS</h6></Button>
+            <Button className="text-center" variant="primary" onClick={printHandler} block>Print Slips</Button>
           </Col>
           </Row>
           </div>
