@@ -195,10 +195,26 @@ const signatureHandler = (imageList, addUpdateIndex) => {
         </Row>
         <Row>
           <Col md={6} sm={12} xs={12} lg={6} xl={6}>
+          <InputGroup className="mb-3">
+              <InputGroup.Prepend>
+                <InputGroup.Text id="inputGroup-sizing-default">Sign Date</InputGroup.Text>
+              </InputGroup.Prepend>
+              <FormControl name="signDate"
+                aria-label="Default"
+                placeholder='01-APR-2021'
+                aria-describedby="inputGroup-sizing-default"
+                value={details.signDate}
+
+                onChange={inputHandler} />
+            </InputGroup>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6} sm={12} xs={12} lg={6} xl={6}>
             <input type='checkbox' name="includeStamp" onChange={inputHandler} />&nbsp;Include Stamp? (not recommended!)
           </Col>
           <Col md={6} sm={12} xs={12} lg={6} xl={6}>
-            <input type='checkbox' name="includeDate" onChange={inputHandler} />&nbsp;Include today's Date?
+            <input type='checkbox' name="includeDate" onChange={inputHandler} />&nbsp;Include sign Date?
           </Col>
         </Row>
         <Row>
@@ -261,6 +277,7 @@ const signatureHandler = (imageList, addUpdateIndex) => {
             includeDate={details.includeDate}
             signature={details.signature}
             images={images}
+            signDate={details.signDate}
           ></Slip>
           </div>
            

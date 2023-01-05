@@ -5,7 +5,7 @@ import stamp from '../images/stamp.PNG'
 // import ReactToPdf from 'react-to-pdf'
 
 
-const Slip = ({ name,images, ownerPan, landlordName, address, rent, rentInWords, startDate, endDate, includeStamp, includeDate }) => {
+const Slip = ({ name,images, ownerPan, landlordName, address, rent, rentInWords, startDate, endDate, includeStamp, includeDate,signDate }) => {
     
     // const ref = React.createRef();
     
@@ -19,7 +19,7 @@ const Slip = ({ name,images, ownerPan, landlordName, address, rent, rentInWords,
             <Row className="my-5">
         {includeDate?
             <Col >
-                Date:{moment().format('DD-MM-YYYY')}
+                Date:{signDate}
                 </Col>:null}
     <Col className='text-right'><u><strong>{rent}/-</strong></u></Col>
         
