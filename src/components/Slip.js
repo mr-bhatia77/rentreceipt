@@ -27,7 +27,7 @@ const Slip = ({ name,images, ownerPan, landlordName, address, rent, rentInWords,
         <Row>
             <Col>{images.map((image, index) => (
               <div key={index} className="image-item">
-                <img src={image['data_url']} alt="" width="150" />
+                <img src={image['data_url']} alt="" width="150" style={{zIndex:'20',marginLeft:'460px',marginTop:'20px',position:'absolute'}} />
               </div>
             ))}</Col>
             {includeStamp?
